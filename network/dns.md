@@ -70,6 +70,12 @@ DNS, Domain Name System, 一个用于将域名(Domain Name)与IP地址进行映�
 
 ## 域名解析过程
 
+- 应用程序需要解析一个dns，交付给resolver进行查询
+- 查询hosts文件
+- 查询浏览器缓存
+- 查询本地isp提供商的dns服务
+- isp负责递归查询
+
 **递归查询和迭代查询**
 
  
