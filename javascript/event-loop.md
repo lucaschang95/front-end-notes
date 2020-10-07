@@ -1,5 +1,11 @@
 # Event Loop
 
+- js时单线程的语言
+- js分为同步任务和异步任务，所有的同步任务都在主线程上执行
+- 另外存在着一个任务队列，只要异步任务又了结果，便在任务队列里面加入一个事件
+- 当主线程的同步任务都执行完了，这个时候会去读区任务队列，依次把他们扔到主线程中执行
+- 这个过程不断循环，构成了js的时间循环机制
+
 
 
 ## 为什么JavaScript是单线程
@@ -35,15 +41,15 @@
 
 
 
-#### macro-task
+#### 宏任务（macro-task）
 
-- 包括: script, `setTimeout`, `setInterval`, `setImmediate`, I/O, UI rendering
+- 包括: script标签，setTimeout，setInterval，setImmediate，I/O, UI rendering
 
 
 
-#### micro-task
+#### 微任务（micro-task）
 
-- 包括: `Promise`
+- 包括: Promise.then，process.nextTick，MutationObserver
 
 
 
