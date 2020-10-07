@@ -9,7 +9,7 @@
 - 根元素（html）
 - 浮动元素 (float)
 - overflow的值不为visible（hidden，scroll，auto，inherit）
-- position的值为absolute或fixed
+- position的值不为static（absolute或fixed）
 - display的值为inline-block, table-cell, table-caption
 
 **注意**: 通常使用`overflow`来形成一个bfc
