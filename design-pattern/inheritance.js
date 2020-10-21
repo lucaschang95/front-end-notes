@@ -1,15 +1,18 @@
-function Parent(name) {
-    this.name = name || 'unknown';
-}
+// function Parent(name) {
+//     this.name = name || 'unknown';
+// }
 
-Parent.prototype.say = function() {
-    return this.name;
-}
+// Parent.prototype.say = function() {
+//     return this.name;
+// }
 
-function Child(name) {}
+// function Child(name) {}
 
-inherit(Child, Parent);
+// inherit(Child, Parent);
 
-function inherit(C, P) {
-    C.prototype = new P();
-}7 /
+// function inherit(C, P) {
+//     C.prototype = new P();
+// }
+
+
+let child = Object.create()
