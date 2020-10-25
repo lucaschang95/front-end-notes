@@ -28,7 +28,7 @@ Function.prototype.bind = function() {
     let context = this;
     let args = [].slice.call(arguments);
     return function() {
-        self.apply(context, [].concat.call(args, [].slice.call.arguments));
+        context.apply(self, [].concat.call(args, [].slice.call.arguments));
     }
 }
 ```

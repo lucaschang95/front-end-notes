@@ -1,10 +1,12 @@
-# CSS选择器
-
-**CSS Selectors**
-
-
+# CSS选择器（Selectors）
 
 ## 选择器类型
+
+#### 元素选择器 (Element Selector)
+
+- p { color: white }
+
+
 
 #### id选择器 (ID Selector)
 
@@ -15,7 +17,7 @@
 
 #### 类选择器 Class Selector
 
-- `.yourClassName { color: white }`
+- \.yourClassName { color: white }
 - 多个class selector可以chaining with no space, 代表所有的class满足的才会添加相应CSS规则
 
 
@@ -38,12 +40,6 @@
 
 
 
-#### 元素选择器 (Element Selector)
-
-- `p { color: white }`
-
-
-
 #### 伪元素选择器 (Pseudo-Element Selector)
 
 选中的不是元素，相当于创造了一些新的元素
@@ -56,7 +52,7 @@
 
 
 
-#### Universal Selector
+#### 通用选择器（Universal Selector）
 
 - 对于优先级无贡献
 
@@ -74,7 +70,7 @@
 
 （Descendant Combinator）
 
-- **空格**
+- 表示：空格
 - 只需要是后代，不需要是子类（direct children）
 
 - `li em{ color: white}`  
@@ -85,7 +81,7 @@
 
 （Child Combinator）
 
-- **大于号**
+- 表示：大于号
 - 需要是子类
 
 -  `article > p { color: white }` 

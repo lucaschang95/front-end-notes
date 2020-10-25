@@ -28,3 +28,25 @@ let publisher = {
         }
     },
 };
+
+function makePublisher(o) {
+    console.log('publisher', publisher);
+    for (let i in publisher) {
+        if (publisher.hasOwnProperty(i) && typeof publisher[i] === 'function') {
+            o[i] = publisher[i];
+        }
+    }
+    o.subscribes = { any: [] };
+}
+
+let paper = {
+    daily: function() {
+        this.publish('big news today!');
+    },
+    monthly: function() {
+        this.publish('interesting anylysis', 'monthly!');
+    },
+};
+
+makePublisher(paper);
+console.log(paper);
