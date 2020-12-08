@@ -61,6 +61,18 @@ parent，children，
 
 
 
-## ES6
+## ES6模块与CommmonJS模块的差异
 
-输出静态定义
+​	
+
+1. CommenJS加载的是一个js对象，ES6模块输出的是接口，一种静态定义
+2. CommonJS模块输出的是一个值的拷贝（值类型不会干扰，但是引用类型会的），ES6输出的是值的引用
+3. CommonJS模块是运行是加载，ES6模块是编译时输出接口
+
+
+
+
+
+## 参考文献
+
+- https://zhuanlan.zhihu.com/p/49522035

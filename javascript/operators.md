@@ -39,26 +39,9 @@ Conditional (ternary) operator `let greeting = (condition) ? run this code : run
 
 
 
-## Strict and loose Equality
-
-**strict:**
-
-1. 不是相同类型, 不相等.
-2. 都是null或者都是undefined, 相等.
-3. 都是boolean的true或者false, 相等.
-4. 其中有一个是NaN, 不相等.
-5. 都是数值类型, 数值相等, 相等.
-6. array, object: 指向相同对象, 相等. 指向不同对象, 不等.
 
 
-
-**loose:**
-
-- 相比strict多了type conversion
-
-
-
-## Operator precedence
+## 运算符优先级（Operator precedence）
 [Operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operator_precedence)
 
 arithmetic > realtional > logical > assignment
@@ -123,3 +106,34 @@ const mergedObj = { ...obj1, ...obj2 };
 
 - 成员访问（member access） > new操作符
 - 算术运算符大于关系运算符，逻辑运算符，三元运算符
+
+
+
+## 等于（Strict and loose Equality）
+
+JavaScript提供三种：`==` `===` `Object.is`
+
+**strict:**
+
+1. 不是相同类型, 不相等.
+2. 都是null或者都是undefined, 相等.
+3. 都是boolean的true或者false, 相等.
+4. 其中有一个是NaN, 不相等.
+5. 都是数值类型, 数值相等, 相等.
+6. array, object: 指向相同对象, 相等. 指向不同对象, 不等.
+
+
+
+**loose:**
+
+- 相比strict多了type conversion
+- `undefined`和`null`在弱等的情况下相等
+
+
+
+
+
+## 参考文献
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
+
