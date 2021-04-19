@@ -6,7 +6,7 @@ Date对象单独拉出去说
 
 1. typeof
 
-   - 返回值：string，number，boolean，undefined，object，symbol
+   - 返回值：function, string，number，boolean，undefined，object，symbol
 
 2. instanceof
 
