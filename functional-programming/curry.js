@@ -16,7 +16,22 @@ let curry = (fn) => {
     };
 };
 
-const multply = (x, y, z) => x * y * z;
+// const multply = (x, y, z) => x * y * z;
 
-const result = curry(multply)(1)(2)(3);
-console.log(result);
+// const result = curry(multply)(1)(2)(3);
+// console.log(result);
+
+let match = curry(function(expr, str) {
+    return str.match(expr)
+;});
+
+let hasNumber = match(/[0-9]+/);
+
+let filter = curry(function(f, ary) {
+    return ary.filter(f);
+});
+
+let findNumbersInArray = filter(hasNumber);
+
+console.log(findNumbersInArray(['js', 'number1']));
+
