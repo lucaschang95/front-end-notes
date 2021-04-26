@@ -64,6 +64,10 @@ https://mooc.study.163.com/learn/1000002001?tid=2403042006#/learn/content
 
 挂载、更新、卸载
 
+[reactjs.org](reactjs.org)
+
+https://pomb.us/build-your-own-react/
+
 ### react router
 
 ### https://juejin.cn/post/6886290490640039943
