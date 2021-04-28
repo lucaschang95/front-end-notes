@@ -1,5 +1,7 @@
 # Context
 
+share data that can be considered '**global**'
+
 #### 具体场景
 
 - 全局变量, 如: **登录用户名**, **主题**, **首选语言**
@@ -69,3 +71,9 @@
 ## `Context.displayName`
 
 - devTool中显示的名字
+
+
+
+## 修改context
+
+将函数传递下去
