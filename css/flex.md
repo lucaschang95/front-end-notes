@@ -16,6 +16,18 @@
 
 **默认是row**
 
+#### `flex-wrap`
+
+**决定是否会换行显示**
+
+`nowrap`, `wrap`, `wrap-reverse`
+
+
+
+#### `flex-flow`
+
+**他是`flex-direction`和`flex-wrap`的简写方式**
+
 
 
 #### justify-content
@@ -32,17 +44,9 @@ stretch`, `center`, `start`, `end
 
 
 
-#### `flex-wrap`
+#### order
 
-**决定是否会换行显示**
-
-`nowrap`, `wrap`, `wrap-reverse`
-
-
-
-#### `flex-flow`
-
-**他是`flex-direction`和`flex-wrap`的简写方式**
+缺省值为0，修改其大小可以改变出现顺序
 
 
 

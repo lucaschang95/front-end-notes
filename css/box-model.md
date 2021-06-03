@@ -1,20 +1,11 @@
 # 盒模型 (box model)
 
+盒模型分为**W3C标准盒模型**与IE盒模型。
 
+- W3C标准盒模型：宽高是**content**的宽高
 
-## 基本概念
-
-#### 标准模型
-
-- w3c定义的
-- 宽高是**content**的宽高
-
-
-
-#### IE模型
-
-- ie自己使用的
-- 宽高是border外部的宽高
+- IE模型：宽高是**border**外部的宽高，包含：content, padding, border的宽度和高度
+- 通过CSS的box-sizing来控制，可选属性：content-box, border-box.
 
 
 
@@ -64,4 +55,6 @@ box-sizing: border-box;
 
 
 
-src 下面会用yi x
+## reference
+
+- https://juejin.cn/post/6844903505983963143

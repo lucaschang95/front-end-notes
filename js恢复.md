@@ -32,6 +32,20 @@ position属性的影响范围
 
 服务器端渲染！
 
+module.export
+
+require
+
+什么事css module
+
+next.js里面hydration是什么
+
+配置docker image和发布应用
+
+https://web.dev/learn/ 学习一下
+
+http://nginx.org/en/docs/beginners_guide.html
+
 
 
 
@@ -93,4 +107,10 @@ https://pomb.us/build-your-own-react/
 ## tencent cloudbase
 
 https://cloud.tencent.com/document/product/876/47995
+
+## webpack
+
+官网
+
+
 
