@@ -2,119 +2,58 @@
 
 ## 选择器类型
 
-#### 元素选择器 (Element Selector)
+- 元素选择器 (Element Selector)
+  - p { ... }
 
-- p { color: white }
+- id选择器 (ID Selector)
+  - #id { ... }
 
+- 类选择器 Class Selector
+  - .class { ... }
+  - 多个class可以串联：必须所有class满足
 
+- 属性选择器 Attribute Selector
+  - 属性存在 a[attr] { ... }
+  - 属性相等 a[href="https://example.com"] { ... }
+  - 属性包含 a[attr~="xxx"]
+  - 属性匹配 a[attr|="xxx"]
 
-#### id选择器 (ID Selector)
+- 伪类选择器 (Pseudo-Class Selector)
+  - 给某些元素加上了类别
+  - button:hover { ... }
+  - `:first-child :last-child :only-child :invalid :hover :focus :nth-child() :first-chil :last-child :nth-of-type()`
 
-- #youIdName { color: white }
+- 伪元素选择器 (Pseudo-Element Selector)
+  - 选中的**不是元素**，相当于创造了一些新元素
+  - 渲染元素的某一部分style certain part of element
+  - p::first-line { color: white}
 
+  - ::first-line ::before ::after
 
+- 通用选择器（Universal Selector）
+  - 对于优先级无贡献
 
 
-#### 类选择器 Class Selector
 
-- \.yourClassName { color: white }
-- 多个class selector可以chaining with no space, 代表所有的class满足的才会添加相应CSS规则
+## 选择器组合
 
+- 后代组合 （Descendant Combinator）
+  - 后代，而不须为直接子类（direct children）
+  - li em{ ... }
+- 子类组合（Child Combinator）
+  - 表示：大于号需要是子类
+- article > p { ... }
 
+- 相邻兄弟组合器（Adjacent Sibling Combinator）
+  - li + p{ ... } 
+  - same level, right after
 
-#### 属性选择器Attribute Selector
+- 后续兄弟组合器（General Sibling Combinator）
+  - div~p { ... }
+- 多个选择器
 
-- attr existing `a[title] {}`
-- attr strict equal `a[href="https://example.com"] {}`
-- attr containing `a[attr~="xxx"]`
-- attr begin with, - after `a[attr|="xxx"]`
-
-
-
-#### 伪类选择器 (Pseudo-Class Selector)
-
-选中的是元素，相当于给某些元素加上了类别
-
-- `button:hover { color: white }`
-- `:first-child :last-child :only-child :invalid :hover :focus :nth-child() :first-chil :last-child :nth-of-type()`
-
-
-
-#### 伪元素选择器 (Pseudo-Element Selector)
-
-选中的不是元素，相当于创造了一些新的元素
-
-**style certain part of element**
-
-- `p::first-line { color: white}`
-
-- `::first-line ::before ::after`
-
-
-
-#### 通用选择器（Universal Selector）
-
-- 对于优先级无贡献
-
-
-
-
-
-
-
-
-
-## 组合
-
-#### 后代组合 
-
-（Descendant Combinator）
-
-- 表示：空格
-- 只需要是后代，不需要是子类（direct children）
-
-- `li em{ color: white}`  
-
-
-
-#### 子类组合
-
-（Child Combinator）
-
-- 表示：大于号
-- 需要是子类
-
--  `article > p { color: white }` 
-
-
-
-#### 相邻兄弟组合器
-
-Adjacent Sibling Combinator
-
-- **加号**
-
-- 相同层级（兄弟），且相邻
-
-- `li + p{ color: white }` same level, right after
-
-
-
-#### 同级组合器
-
-（General Sibling Combinator）
-
-- **约等于号**
-- 同级，但是必须在后面
-
-- `h1 ~ p`
-
-
-
-#### 多个选择器
-
-- **逗号**
-- 命中多个规则
+  - 逗号
+  - 命中多个规则
 
 
 
@@ -128,7 +67,7 @@ Adjacent Sibling Combinator
 
 
 
-#### 优先级
+## 优先级
 
 **优先级为1**: 元素选择器, 伪元素选择器
 
@@ -142,33 +81,6 @@ Adjacent Sibling Combinator
 
 
 
-#### Ref
+## ref
 
 https://specifishity.com/
-
-
-
-## CSS Sprite
-
-**CSS精灵图/雪碧图**
-
-
-
-#### 优点
-
-1. 减少图片的字节
-2. 减少HTTP请求, 提高了性能
-
-
-
-#### 缺点
-
-1. 维护时比较麻烦
-
-
-
-#### 使用方法
-
-- `background-image`决定使用哪张大图片
-- `width`, `height`决定小图片大小
-- `background-position`: 决定小图片在大图片中的位置
