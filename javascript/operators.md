@@ -90,44 +90,60 @@ const mergedObj = { ...obj1, ...obj2 };
 4. nodeList literal
 将多个querySelector得到的nodeList合并
 
-
-
-
-
 ## 优先级
 
-括号，member access，function call，new
+（从高到低）
+
+- grouping，括号
+
+- member access，computed memeber access，function call，new，optional chaining 可选链式调用
+- 后置递增、后置递减
+- 一元运算符
+- 算数运算符
+- 关系运算符 
+- 逻辑运算符 
+- 赋值运算符
+
+## 相等性判断
+
+方法
+
+- === strict equality 严格相等
+- == loose equality 非严格相等
+- Object.is
+
+### strict equality 严格相等
+
+- 不是相同类型, 返回false
+- 基本类型
+  - 值相等返回true，否则返回false
+    - 包括null，undefined，布尔，string，数值等
+  - NaN与NaN不相等
+- 引用类型
+  - 指向相同对象，返回true，否则返回false
+
+### loose equality 非严格相等
+
+- 不是相同类型时，首先进行类型转换
+- 之后进行类型比较
 
 
 
-函数调用等 > 算数运算符 > 关系运算符 > 逻辑运算符 >  赋值运算符
+### 类型转换
 
+前提是a b类型不相同，且进行非严格相等的判断
 
+- a b均为基本类型，转换为number
+- 基本类型与引用类型时，引用类型转换为基本类型
+  - A.toString(), A.valueOf()
+  - 基本类型除了string，number需要转为number
 
-- 成员访问（member access） > new操作符
-- 算术运算符大于关系运算符，逻辑运算符，三元运算符
+### Object.is()
 
-
-
-## 等于（Strict and loose Equality）
-
-JavaScript提供三种：`==` `===` `Object.is`
-
-**strict:**
-
-1. 不是相同类型, 不相等.
-2. 都是null或者都是undefined, 相等.
-3. 都是boolean的true或者false, 相等.
-4. 其中有一个是NaN, 不相等.
-5. 都是数值类型, 数值相等, 相等.
-6. array, object: 指向相同对象, 相等. 指向不同对象, 不等.
-
-
-
-**loose:**
-
-- 相比strict多了type conversion
-- `undefined`和`null`在弱等的情况下相等
+- 与严格相等类似
+- 处理数字时
+  - +0和-0相等
+  - NaN和NaN相等
 
 
 
@@ -135,5 +151,6 @@ JavaScript提供三种：`==` `===` `Object.is`
 
 ## 参考文献
 
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 

@@ -1,3 +1,48 @@
+# CSS居中
+
+## 水平居中
+
+- 行内元素
+  - text-align: center
+- 块级元素
+  - flex
+  - 绝对定位
+    - transform: translateX(-50%)
+    - margin-left: -0.5*宽度
+    - left, right为0，margin: 0 auto;
+
+## 垂直居中
+
+- 行内单行元素
+  - line-height: 高度
+- 块级元素
+  - table
+  - flex
+  - 绝对定位
+    - transform: translateY(-50%)
+    - margin-top: -0.5*宽度
+    - top, bottom为0，margin: auto 0;
+
+
+
+#### margin
+
+- `margin: 0 auto`
+
+
+
+## 总结
+
+**position: relative**
+
+**position: absolute**
+
+**translate: transform(-50%, -50%)**
+
+**display: flex**
+
+**margin-top: -150px**
+
 ## CSS垂直居中
 
 #### 方法 1
@@ -26,31 +71,7 @@
 
 
 
-## CSS水平居中
 
-#### 使用text-align属性
-
-- 如果居中元素为inline/inline-block元素, 可以使用`text-align: center`
-
-
-
-#### margin
-
-- `margin: 0 auto`
-
-
-
-## 总结
-
-**position: relative**
-
-**position: absolute**
-
-**translate: transform(-50%, -50%)**
-
-**display: flex**
-
-**margin-top: -150px**
 
 
 

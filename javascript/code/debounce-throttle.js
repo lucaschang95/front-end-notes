@@ -34,3 +34,40 @@ function throttle(callback, interval) {
     }
   };
 }
+
+function debounce(fn, time) {
+  let timer;
+  return () => {
+    if (timer) {
+      clearTimeout(timer);  
+    }
+    timer = setTimeout(() => {
+      let arg = arguments;
+      let context = this;
+      fn.apply(context, arg);
+    }, time);
+  };
+}
+
+function throttle(fn, time) {
+  let lastTime;
+  return () => {
+    let arg = arguments;
+    let context = this;
+    if (lastTime) {
+      const tempTime = + new Date();
+      if (tempTime - lastTime > time) {
+        fn.apply(context, arg);
+        lastTime = tempTime;
+      }
+    } else {
+      lastTime = + new Date();
+    }
+  };
+}
+
+let fn = ()=>{
+  console.log('boom')
+}
+
+setInterval(throttle(fn,1000),10)

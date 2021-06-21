@@ -10,7 +10,7 @@
 
 ## external CSS
 
-<Link rel="stylesheet" type="text/css" href="style.css"
+<Link rel="stylesheet" type="text/css" href="style.css">
 
 ## internal CSS
 

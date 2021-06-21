@@ -1,6 +1,6 @@
 # 响应式设计
 
-
+- 网站兼容多个终端（PC, mobile）
 
 ## 设置viewport
 

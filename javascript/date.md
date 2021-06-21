@@ -30,8 +30,7 @@
 
 
 
-#### 获取当前时间的时间戳
+## 当前时间戳
 
-**Date.now()**
-
-**new Date().getTime()**
+- Date.now()
+- new Date().getTime()
