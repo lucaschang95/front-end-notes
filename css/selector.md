@@ -42,8 +42,8 @@
   - li em{ ... }
 - 子类组合（Child Combinator）
   - 表示：大于号需要是子类
-- article > p { ... }
-
+  - article > p { ... }
+  
 - 相邻兄弟组合器（Adjacent Sibling Combinator）
   - li + p{ ... } 
   - same level, right after

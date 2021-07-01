@@ -20,6 +20,16 @@
 
 - `Array.isArray()`
 
+## 静态方法
+
+### from
+
+- Array.from()
+  - array-like objects
+  - iterable objects(map, set)
+
+### 
+
 
 
 ## 方法
@@ -30,6 +40,11 @@
 - 拼接一个新数组
 - 原数组不改变
 - 返回新数组
+
+### entries
+
+- 返回array iterator对象
+- 调用next()函数，返回value、done的值
 
 ### every
 
