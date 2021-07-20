@@ -1,6 +1,8 @@
 # CSS writing-mode
 
-**可选值**：
+- 创意排版（古诗词...）
+
+## 可选值
 
 - horizontal-tb (水平，top 2 bottom)
 - vertical-rl (垂直，right 2 left)

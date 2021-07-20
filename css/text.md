@@ -2,7 +2,7 @@
 
 
 
-> color
+## color
 
 
 
@@ -60,7 +60,9 @@
 
 
 
+## gtext-overflow
 
+- ellipsis
 
 
 
