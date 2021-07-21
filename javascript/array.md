@@ -14,21 +14,22 @@
 - `Array(arrayLength)`
 - `Array.of(element0, element1...)`
 
-
-
-## 判断是否是数组
-
-- `Array.isArray()`
-
 ## 静态方法
 
 ### from
 
-- Array.from()
+- Array.from(obj)
   - array-like objects
-  - iterable objects(map, set)
+  - iterable objects(map, set)变为数组
 
-### 
+### isArray
+
+- 是否是数组
+
+### of
+
+- Array.of(a,  b, c...)
+- 将a, b, c等构造为一个数组
 
 
 
@@ -101,6 +102,12 @@
 - 返回一个拼接后的string，添加你想要的separators
 - 会自动把其他类型元素变为string
 
+### keys
+
+- key值的Iterator obj
+
+- next, 
+
 ### lastIndexOf
 
 - lastIndexOf(element, fromIndex)
@@ -120,6 +127,11 @@
 
 - push(element)
 - 返回push之后数组的长度
+
+### reduce
+
+- reduce(fn, initialValue)
+- fn: (accumulator, currentValue, index, array) => { ... }
 
 ### reverse
 

@@ -1,4 +1,9 @@
-# 渲染过程
+# render process渲染过程
+
+- parsing HTML to constuct the DOM layer
+- render tree construction
+- layout of the render tree
+- painting the render tree
 
 
 

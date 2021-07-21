@@ -60,7 +60,7 @@
 
 
 
-## gtext-overflow
+## text-overflow
 
 - ellipsis
 

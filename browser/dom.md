@@ -4,53 +4,42 @@
 
 - **w3c指定的DOM standard**
 
+## standard
 
-
-#### DOM1
+DOM1
 
 - DOM1 (DOM Level 1)主要定义了HTML和XML文档的底层结构
 
-
-
-#### DOM2
+DOM2
 
 - DOM2 (DOM Level 2) 和 DOM3 (DOM Level 3) 在基础上加入了更多的交互能力, 提供了更高级的XML特性
 
+DOM3
 
+## element（元素）/node（节点）?
 
-#### DOM3
+- node包含element
 
+## node 节点
 
+### 分类
 
-## 节点
+- 元素节点、属性节点、文本节点
+- 属性节点和文本节点都需要先找到元素节点
 
-#### 分类
-
-1. 元素节点: `document.getElementById()`
-2. 属性节点: `document.getElementById().getAttributeNode()`
-3. 文本节点: `document.getElementById().firstChild`
-
-**属性节点和文本节点都需要先找到元素节点**
-
-
-
-#### `nodeName`属性
+### nodeName属性
 
 - 元素节点: 标签名称
 - 属性节点: 属性名称
-- 文本节点: 永远是 #text
+- 文本节点: 永远是text内容
 
-
-
-#### nodeValue属性
+### nodeValue属性
 
 - 元素节点: `null`
 - 属性节点: 属性值
 - 文本节点: 文本内容
 
-
-
-#### nodeType属性
+### nodeType属性
 
 - 元素节点: 1
 - 属性节点: 2
@@ -58,9 +47,7 @@
 - 注释节点: 8
 - 文档节点: 9
 
-
-
-#### 节点(包括属性节点和文本节点)间关系(导航)
+### 导航属性
 
 - `parentNode`
 - `childNodes`
@@ -68,8 +55,6 @@
 - `lastChild`
 - `nextSibling`
 - `previousSibling`
-
-
 
 #### 节点(只有元素节点)间的导航
 
@@ -82,38 +67,28 @@
 
 - `document.createTextNode(text)`创建**文本节点**
 
-
-
-## （元素节点）查找
-
-#### 查找方法
+## 查找节点
 
 通过 **id**, **标签名**, **类名**, **CSS选择器**, **HTML对象集合**来查找HTML元素
 
-- `document.getElementById(id)` 
-- `document.getElementsByTagName(name)`
-- `document.getElementByClassName(name)`
-- `document.querySelector(selector)`
-- `document.querySelectorAll(selector)`
+- document.getElementById(id)
+  - 返回元素obj
+- document.getElementsByTagName(name)
+  - 返回HTMLCollection
+- document.getElementByClassName(name)
+  - 返回HTMLCollection
+- document.querySelector(selector)
+- document.querySelectorAll(selector)
+  - 返回NodeList
 
+## 区分：HTMLCollection 和 NodeList
 
+- **HTMLCollection** 是动态的, **NodeList** 是静态的（存疑）
+- **NodeList** 包含元素节点, 属性节点, 文本节点, **HTMLCollection** 只包含元素node
 
-#### 区分：HTMLCollection 和 NodeList
+## 创建节点
 
-- **HTMLCollection** 是动态的, **NodeList** 是静态的
-- **NodeList** 包含元素节点, 属性节点, 文本节点, **HTMLCollection** 只包含
-
-
-
-
-
-
-
-## （元素节点）增删
-
-#### 创建
-
-- `document.createElement(element)`
+- document.createElement(tagName)
 
 
 
