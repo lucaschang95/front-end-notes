@@ -1,15 +1,13 @@
 # JavaScript继承
 
-**继承: 即我们希望一个对象能够访问另一个对象的属性, 同时能添加自己的属性和覆盖另一个对象的属性**
+- 对象访问一个属性时
+  - 首先查找自有属性
+  - 如果没有，在`[[proto]]`指向的原型对象中继续查找。
 
+## 好处
 
-
-## 讲一讲JavaScript中的继承
-
-- JavaScript是一门基于原型链的语言
-- 当对象访问一个属性时, 会首先查找自有属性, 如果没有会在`[[proto]]`指向的原型属性中继续查找...如同攀爬一个原型链一般, 如果还没有找到会返回`undefined`
-
-
+- 代码复用
+- 逻辑清晰
 
 ## 获得原型对象的方法
 
@@ -19,12 +17,15 @@
 
 
 
+## API
+
+- Object.getPrototypeOf( )
+- Object.setPrototypeOf( )
+- `__proto__`属性
+- Object.create( )
+  - newObj = Object.create(protoObj, propDescriptor)
 
 
-## Object.create()
-
-- syntax: `newObj = Object.create(protoObj, propDescriptor)`
-- 这种继承方式只是一次性的
 
 #### 调用Object.create()发生了什么
 
@@ -87,7 +88,10 @@
 - **`Student.prototype = Object.create(Person.prototype), Student.prototype.constructor = Student`**
 - react中, **Component** 和 **PureComponent**之间就是使用的这种方法
 
+## 寄生组合
 
+- 增加一个中间层
+- 新建一个空对象，子构造prototype指向它，它只想父构造的prototype
 
 
 

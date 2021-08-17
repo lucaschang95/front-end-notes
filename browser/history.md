@@ -5,19 +5,19 @@
 
 ## api
 
-**length**
+### length
 
 - 历史记录中页面总数
 
-**back()**
+### back( )
 
-**forward()**
+### forward( )
 
-**go(index)**
+### go(index)
 
 - 决定后退几步还是前进几步
 
-**pushState**
+### pushState( )
 
 - pushState(state, title, url)
 - 添加一条历史记录，不刷新页面
@@ -26,7 +26,7 @@
 - url：新网址，必需与前一个页面处于同一个域
 - url可以直接填写path之后的部分
 
-**replaceState()**
+### replaceState( )
 
 
 

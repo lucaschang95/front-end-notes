@@ -1,12 +1,12 @@
-# Date日期数据格式
+# Date 日期
 
 ## 创建日期
 
-- `let today = new Date()`
+- Date( ) 等同于 new Date( ).toString( )
 - `let date = new Date(1995, 11, 25, 0, 0, 0)`
   - 参数是年, 月, 日, 小时, 分钟, 秒
 
-**最常使用的是new Date()**
+
 
 
 
@@ -28,9 +28,7 @@
 
 
 
-
-
-## 当前时间戳
+## 当前时间
 
 - Date.now()
 - new Date().getTime()

@@ -1,4 +1,4 @@
-# 类型
+# Type 类型
 
 let num: number;
 
@@ -20,9 +20,17 @@ void用来表示一个函数没有返回值
 
 
 
-#### 联合类型
+## literal types 字面类型
 
-用|分割开
+- 只表示当前这个number / string
+- 用在union类型里特别好用
+
+
+
+## union types
+
+- union type是重要的一种类型
+- 用 | 分割开
 
 
 
@@ -69,3 +77,15 @@ void用来表示一个函数没有返回值
 ## 元组类型
 
 数组，但是存放不同类型
+
+
+
+## 函数
+
+- 函数也是一等公民！
+
+
+
+## best practice
+
+- Always use as few type parameters as possible

@@ -1,25 +1,26 @@
-function Person(name = 'anonymous') {
+function Person(name) {
   this.name = name;
 }
 
-Person.prototype.getName = function() {
-  console.log(this.name);
+Person.constructor.a = 'test';
+
+console.log('Person.constructor', Person.constructor);
+console.log('Person.constructor', Person.constructor.a);
+
+const anna = new Person('dada');
+
+// for (let key in a) {
+//   console.log('key', key);
+// }
+
+const a = { a: 1, b: 2 };
+const b = { c: 3, d: 4 };
+Object.setPrototypeOf(a, b);
+
+console.log('a.c', a.c);
+
+for (let key in a) {
+  console.log('key', key);
 }
-
-function Student(name, subject) {
-  Person.call(this, name);
-  this.subject = subject;
-}
-
-Student.prototype = new Person();
-Student.prototype.constructor = Student;
-
-Student.prototype.getSubject = function() {
-  console.log(subject);
-};
-
-
-let student1 = new Student('bob', 'math');
-console.log(student1.constructor);
-console.log(student1 instanceof Object);
-console.log(student1 instanceof Person);
+console.log('a', a.prototype);
+console.log('a', a.__proto__);

@@ -10,8 +10,6 @@ Date对象单独拉出去说
 
 2. instanceof
 
-   
-
 3. Object.prototype.toString.call(obj)
    
    1. [object String]，[object ]

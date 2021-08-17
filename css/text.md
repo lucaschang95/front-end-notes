@@ -2,6 +2,44 @@
 
 
 
+
+
+## word-break, word-wrap, white-space如何处理？
+
+- 空格, 多个空格,  `&nbsp;`, `<br>`, html中的换行
+
+
+
+## white-space
+
+- 处理white space时候的行为
+- 控制空白字符显示
+
+
+
+- normal: 
+- nowrap: 从不换行，除非br
+- pre: preserve的缩写
+- pre-wrap: preserve基础上换行
+- preline
+
+
+
+## work-break
+
+- normal: 
+- break-all:所有单词碰到边界一律拆分换行
+- keep-all: 所有“单词”一律不拆分换行
+- 单词定义：英文单词，连续的中文字符
+
+
+
+## word-wrap
+
+- word-break的补充
+
+
+
 ## color
 
 

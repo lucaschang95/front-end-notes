@@ -26,7 +26,7 @@
 
 
 
-#### 属性的6个特征属性
+### 对象属性的6个特征属性
 
 所有对象属性都有如下特征属性
 
@@ -74,10 +74,11 @@
 
 #### 属性的遍历
 
-- `Object.keys()`
+- Object.keys( )
   - 自身可遍历属性名字的数组
+  - Object.values( ), Object.entries( )同样的标准
 - `for...in`
-  - 还包括原型链上的属性
+  - 可遍历，自己的 + 原型链上的属性
 - `Object.getOwnPropertyNames()`
   - 自身所有属性名字的数组
 
@@ -178,5 +179,13 @@ function _new(constructor, param, ...) {
 
 #### Object.create
 
-**`Object.create()`**方法创建一个新对象，使用现有的对象来提供新创建的对象的原型
+`Object.create()`方法创建一个新对象，使用现有的对象来提供新创建的对象的原型
+
+
+
+
+
+## 遍历对象属性
+
+
 
