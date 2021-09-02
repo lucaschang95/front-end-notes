@@ -1,11 +1,16 @@
-# 跨域 (同源策略)
+# CORS
 
-**schema, domain, port (协议, 主机, 端口), 只要有一点不同即为跨域** 
+- 浏览器同源策略，保障用户安全
+- 协议(schema), 主机(domain), 端口(port)相同才为同源
+- CORS需要在可用性和安全性中间寻找平衡点
 
-- 第三方API
-- 前后端分离
 
 
+## 非同源的限制
+
+- Cookie, LocalStorage 和 IndexDB无法读取
+- DOM无法获得
+- AJAX请求不能发送
 
 
 
@@ -15,28 +20,8 @@
 
   - 跨域写操作: 表单提交, 重定向请求
 
-- 安全性 浏览器需要防止站点A的脚本向站点B发起危险操作
-  - Cookie, LocalStorage 和 IndexDB无法读取
-  - DOM无法获得
-  - AJAX请求不能发送
 
 
-
-## CORS 
-
-**Cross-Origin Resource Sharing(CORS)**
-
-**CORS需要在可用性和安全性中间寻找平衡点**
-
-
-
-
-
-## 实现跨域的方式
-
-- JSONP
-- CORS
-- websocket
 
 
 
@@ -57,30 +42,12 @@
 -  根据url, 请求名称, 值和回调函数名称, **构造请求url** (GET方法)
 - **构造**script标签, 并**挂载**到DOM上
 - 挂载script元素, 等待调用
-- 
 - 完事后删除script
-
-
-
-
 
 #### 缺点
 
 - 只支持 **GET** 方法
 - 这个回调函数必须是一个全局函数
-
-
-
-
-
-## CORS
-
-#### 基本思想
-
-- 如果站点B允许站点A的脚本访问其资源, 必须显示的告诉浏览器: B是被允许的
-
-- 请求时带`Origin`头部
-- 返回`Access-Control-Allow-Origin`
 
 
 

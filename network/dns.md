@@ -14,27 +14,17 @@ DNS, Domain Name System, 一个用于将域名(Domain Name)与IP地址进行映�
 
 所有的域名形成了一个域名树, 根下面是顶级域名, 再往下是二级域名, 三级域名, 四级域名...
 
+顶级域名
 
+- 国家顶级域名: cn, us, uk
 
-#### 顶级域名
+- 通用顶级域名: com, net, org, gov, int
 
-**国家顶级域名**: cn, us, uk
+二级域名
 
-**通用顶级域名**: com, net, org, gov, int
+类别域名: ac, com, edu, gov, mil, net, org
 
-**基础结构域名/反向域名**
-
-
-
-#### 二级域名
-
-**类别域名**: ac, com, edu, gov, mil, net, org
-
-**行政区域名**: 用于我国各省, 自治区, 直辖市
-
-
-
-#### 三级域名
+三级域名
 
 如: tju.edu.cn
 
@@ -83,3 +73,17 @@ DNS, Domain Name System, 一个用于将域名(Domain Name)与IP地址进行映�
 - 最开始都是由主机去查询本地域名服务器, 这个过程是 **递归查询**
 
 - 本地域名服务器迭代的查询顶级域名服务器, 权限域名服务器, 这个过程
+
+
+
+## Zone file
+
+
+
+
+
+## SOA记录
+
+start of authority
+
+- 一个zone file只能有一个soa记录
