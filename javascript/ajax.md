@@ -9,6 +9,7 @@
 ## 创建请求
 
 - `let httpRequest = new XMLHttpRequese()`
+- 兼容问题
 
 
 
