@@ -1,9 +1,20 @@
-# Reconciliation 调和
+# 调和算法（reconciliation）
+
+对旧fiber节点和新reactElement进行比较，判定旧fiber节点是否可以复用，生成新的fiber子节点。
+
+
 
 - 复杂度：O(n)
 - 启发式算法，基于的两个假设：
   - two elements of different types will produce different trees. 两个不同类型的元素一定会形成两个不同的树
   - The developer can hint at which child elements may be stable across different renders with a key prop. 开发者指明了在UI更新中，哪两个元素可能是相同的。
+
+
+
+主要作用
+
+1. 设置fiber.flags(Placement, Deletion)
+2. 
 
 ## Diffing Algorithm
 

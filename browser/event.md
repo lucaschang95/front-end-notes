@@ -37,34 +37,6 @@
 
 
 
-## onchange事件
-
-用在input上
-
-
-
-
-
-## onmouseover/ onmouseout事件
-
-**应该所有element都有这个事件**
-
-
-
-
-
-## onmousedown / onmoseup/ onclick
-
-**触发顺序: down --> up --> click**
-
-
-
-
-
-## onfocus / onblur
-
-**是否聚焦**
-
 
 
 
@@ -89,3 +61,10 @@
 ## onresize
 
 **配合`window.innerWidth`和`window.innerHeight`**
+
+
+
+## DOMContentLoaded, loaded
+
+1. 前者是指html已经被loaded, parsed, without waiting for stylesheets, images, and subframes
+2. loaded: fully loaded, 包括所有依赖资源：css, 图片，sub-frame
