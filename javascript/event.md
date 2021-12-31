@@ -2,18 +2,6 @@
 
 
 
-
-
-#### addEventListener
-
-- `target.addEventListener(type, listener[, useCapture])`
-- 默认是在冒泡阶段注册
-
-- removeEventListen也是同理
-- 要想注册过的事件能被移除，必须将回调函数保存起来
-
-
-
 ## 事件流
 
 DOM事件流分为三个阶段：**捕获阶段**，**目标阶段**，**冒泡阶段**

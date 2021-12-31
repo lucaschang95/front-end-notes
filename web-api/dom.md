@@ -61,8 +61,6 @@ DOM3
 - `children`
 - `parentElement`
 
-
-
 #### 文本节点
 
 - `document.createTextNode(text)`创建**文本节点**
@@ -97,28 +95,16 @@ DOM3
 - `element.appendChild(element)` 该节点会变为父节点的最后一个子节点
 - `element.insertBefore(element1, element2)` 将element1插入到element2之前
 
-
-
 #### 删除元素节点
 
 - `element.removeChild(element)` 将子元素删除 (需要同时有父子的引用)
 - **或者**: `element.parentNode.removeChild(element`)`
-
-
-
-
-
-
 
 ## （元素节点）修改
 
 #### 替换元素节点
 
 - `element.replaceChild(element1, element2)` 用element1替换element2
-
-
-
-
 
 ## 修改内容和样式
 
@@ -177,14 +163,6 @@ DOM3
 - 通过`getElementsByTagName()`和`getElementsByClassName()`得到
 - 通过索引访问
 
-
-
-
-
-
-
-
-
 ## document属性
 
 - `document.body`
@@ -195,41 +173,19 @@ DOM3
 - `document.title`
 - `document.URL`
 
-
-
-
-
-
-
 ## DOM事件
 
 **deal by message queue**
 
 https://developer.mozilla.org/en-US/docs/Web/Events
 
-
-
-## 注册事件处理程序
-
-
-
-#### `EventTarget.addEventListener`
-
-
-
 #### HTML标签属性
 
 - `<button onclick="alert('Hello world!')">`
 
-
-
 #### DOM元素属性
 
 - `myButton.onclick = function(event){alert('Hello world')}`
-
-
-
-
 
 #### e.target
 
@@ -248,11 +204,7 @@ https://developer.mozilla.org/en-US/docs/Web/Events
 
 - 阻止触发这个事件的default action
 
-
-
 #### stopPropagation
-
-
 
 #### Event Delegation 事件委托
 
@@ -261,10 +213,6 @@ https://developer.mozilla.org/en-US/docs/Web/Events
 
 使用event bubbling和eventObj.target属性完成事件委托
 
-
-
-
-
 ## window.onload和DOMContentLoaded
 
 - `onload`: 页面上所有DOM, css, jss, 图片等都已经加载完成
@@ -272,9 +220,10 @@ https://developer.mozilla.org/en-US/docs/Web/Events
 - `DOMContentLoaded`: 仅DOM加载完成 (without waiting for resources to finish loading)
   - 存在于`document`对象上
 
+## 元素宽高
 
-
-
-
-
-
+- offsetWidth, offsetHeight: content, padding, border
+- clientWidth, clientHeight: content, padding
+- scrollWidth, scrollHeight: 所有可滚动区域的宽度和高度
+- offsetTop: 元素顶部距离最近定位的父元素顶部的距离
+- scrollTop: 可滚动元素，元素可视区域距离元素顶部的像素（向下的滚动距离）
