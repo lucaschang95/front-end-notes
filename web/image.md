@@ -1,18 +1,12 @@
 # 图片
 
-
-
 ## png
 
 - portable network graphics
 
-
-
 ## jpeg
 
 - Joint Photographic Experts Group
-
-
 
 ## gif
 
